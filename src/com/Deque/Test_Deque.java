@@ -69,7 +69,7 @@ public class Test_Deque {
 				System.out.println("队列规模:"+s.getSize());
 				break;
 			}
-		}
+		} 
 		in.close();
 	}		
 }
