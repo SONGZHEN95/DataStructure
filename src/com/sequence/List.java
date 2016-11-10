@@ -20,5 +20,4 @@ public interface List {
 	public Object replace(Position p,Object e) throws ExceptionPositionInvalid;//将处于给定位置的元素替换为新元素,并返回被替换的元素
 	public Iterator positions();//位置迭代器
 	public Iterator elements();//元素迭代器
-	
 }
