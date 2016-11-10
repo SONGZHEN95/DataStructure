@@ -1,5 +1,6 @@
 package com.tree;
 
+import com.linked_list.*;
 public class TreeLinkedList implements Tree{
 	
 	private Object element;//树根节点
@@ -88,6 +89,22 @@ public class TreeLinkedList implements Tree{
 			for(TreeLinkedList u=v.getFirstChild();u!=null;u=u.getNextSibling()) //先访问孩子节点
 				PostorderTraversal(u);
 			System.out.println(v.getElem());//再访问V
+		}
+	}
+	
+	//层序遍历
+	public void LevelorderTraversal(TreeLinkedList v){
+		TreeLinkedList u,w;
+		if(v != null){
+			Queue_List s = new Queue_List();
+			s.enqueue(v);
+			while(!s.isEmpty()){
+				u=(TreeLinkedList)s.dequeue();
+				System.out.println(u.getElem());
+				for(w=u.getFirstChild();w!=null;w=w.getNextSibling()){
+					s.enqueue(w);
+				}
+			}
 		}
 	}
 
